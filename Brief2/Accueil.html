@@ -1,0 +1,189 @@
+<html>
+      
+
+    <head>
+            <title>Youcode</title>
+            <link rel="stylesheet" type="text/css" href="Mycss.css" />
+            <script>
+                    var TxtType = function(el, toRotate, period) {
+                    this.toRotate = toRotate;
+                    this.el = el;
+                    this.loopNum = 0;
+                    this.period = parseInt(period, 10) || 2000;
+                    this.txt = '';
+                    this.tick();
+                    this.isDeleting = false;
+                };
+            
+                TxtType.prototype.tick = function() {
+                    var i = this.loopNum % this.toRotate.length;
+                    var fullTxt = this.toRotate[i];
+            
+                    if (this.isDeleting) {
+                    this.txt = fullTxt.substring(0, this.txt.length - 1);
+                    } else {
+                    this.txt = fullTxt.substring(0, this.txt.length + 1);
+                    }
+            
+                    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+            
+                    var that = this;
+                    var delta = 200 - Math.random() * 100;
+            
+                    if (this.isDeleting) { delta /= 2; }
+            
+                    if (!this.isDeleting && this.txt === fullTxt) {
+                    delta = this.period;
+                    this.isDeleting = true;
+                    } else if (this.isDeleting && this.txt === '') {
+                    this.isDeleting = false;
+                    this.loopNum++;
+                    delta = 500;
+                    }
+            
+                    setTimeout(function() {
+                    that.tick();
+                    }, delta);
+                };
+            
+                window.onload = function() {
+                    var elements = document.getElementsByClassName('typewrite');
+                    for (var i=0; i<elements.length; i++) {
+                        var toRotate = elements[i].getAttribute('data-type');
+                        var period = elements[i].getAttribute('data-period');
+                        if (toRotate) {
+                          new TxtType(elements[i], JSON.parse(toRotate), period);
+                        }
+                    }
+                    var css = document.createElement("style");
+                    css.type = "text/css";
+                    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+                    document.body.appendChild(css);
+                };
+            
+            </script>
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                <ul class="mn">
+                    <li><img src="res/white.png" width="150px"></li>
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="Campus.html">Campus</a></li>
+                    <li><a href="#">Principes Pédagogiques</a></li>
+                    <li><a href="#">Programme</a></li>
+                    <li><a href="#">Ou nous trouver</a></li>
+                    <li><a href="#">Langue</a>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                    </li>
+                    <li><button class="inscr" >INSCRI-TOI</button></li>
+                </ul>
+            </div>
+            <div class="slid">
+                            <h1>
+                            <a href="" class="typewrite" data-period="2000" data-type='[ "Une école 100% gratuite", "Pour construire ton futur", "Pour atteindre tes objectifs" ]'>
+                              <span class="wrap"></span>
+                            </a>
+                          </h1>
+                    <p class="citation">UNE FORMATION GRATUITE ET PROFESSIONELLE</p>
+                    <div class="btn">
+                    <button class="ins">INSCRI-TOI</button>
+                    <button class="dcvr">Découvrire l'école</button>
+                    </div>
+            </div>
+        </header>
+            <div class="txt">
+                <h1>L'école YouCode</h1>
+                <p>Le numérique et les nouvelles technologies sont partout autour de nous, mais leur code et leur langage ne sont pas toujours naturels et innés pour tous. La fracture entre ceux qui parlent le « numérique » et le manipulent avec aisance et les autres est souvent très grande. C’est pourquoi YouCode veut mettre le code entre toutes les mains pour réduire les inégalités numériques et donner sa chance à tout un chacun.</p>
+            </div>
+
+
+            <section class="infos">
+                <div class="s">
+                    <img src="res/9lb.png" width="40px">
+                    <h4>Apprendre sans barrières</h4>
+                    <p>Car peu importe votre niveau d’études, votre sexe ou encore votre pouvoir d’achat, chacun(e ) est le/la bienvenu(e) à YouCode. Aucun diplôme n’est requis. Nous valorisons la passion pour la technologie et l’envie d'apprentissage.</p>
+                </div>
+                <div class="s">
+                        <img src="res/pwr.png" width="20px">
+                    <h4>Une méthodologie innovante</h4>
+                    <p>100% pratique et axée sur les technologies les plus demandées du marché, YouCode utilise un programme d'apprentissage basé sur les projets, utilisant la technologie et la recherche pour relier les concepts à la réalité du marché du travail.</p>
+                </div>
+                <div class="s">
+                        <img src="res/parametre.png" width="40px">
+                    <h4>Gratuite & intensive</h4>
+                    <p>A YouCode la formation est entièrement gratuite. Dotés d’ordinateurs à la pointe de la technologie, vous apprendrez comme si vous étiez en entreprise, du lundi au vendredi de 09h00 à 17H00.</p>
+                </div>
+            </section>
+            <section class="rpns">
+                <div class="rp">
+                    <img src="res/back1.jpg" >
+                </div>
+                <div class="rp2">
+                    <h2 class="quoi">C'est quoi YouCode ?</h2>
+                    <p id="ct">"Une école à la pointe de la modernité"</p><br/>
+                    <p id="ds">YouCode… Ce n’est pas un simple nom. C’est toute une philosophie. YouCode est une école inclusive qui ouvre les chances à tous. You… comme… toi. YouCode place l’individu au centre de sa pédagogie en même temps qu’elle l’aide à développer une synergie de travail avec les autres . Code… comme code. Du site web aux algorithmes en passant par les applis. Située dans des villes comme Youssoufia ou Safi, un endroit idéal pour y étudier le code, loin de l’effervescence des grandes villes.</p>
+                </div>
+            </section>
+            <div class="simplon">
+                <p id="powred">POWERED By</p>
+                <p id="simp">Simplon.co</p>
+            </div>
+
+
+            <section class="pourcentage">
+                <div class="prs">
+                    <h4 id="nmbr">2265</h4>
+                    <p>Simploniens dans le monde</p>
+                </div>
+                <div class="prs">
+                    <h4 id="nmbr">87%</h4>
+                    <p>De sorties positives aprés 6 mois formation</p>
+                </div>
+                <div class="prs">
+                    <h4 id="nmbr">53</h4>
+                    <p>Fabriques ouverts en france et à l'international</p>
+                </div>
+            </section>
+
+            <section class="sponsors">
+                <div id="bref">
+                    <p><b>SIMPLON.co</b> est un réseau de fabriques numériques et inclusives en France et à l’étranger. L’école a formé plus de 2000 aux métiers du numérique depuis 2013.</p>
+
+                           <p> SIMPLON.co une entreprise sociale et solidaire qui veut faire du numérique un véritable levier d’inclusion et révéler des talents parmi des publics peu représentés dans le secteur.</p>
+                            
+                           <p> Simplon conseille les entreprises dans leur transformation digitale et parfois réalise leurs sites et leurs applications.</p>
+                </div>
+                <div class="creation">
+                    <h1 id="cr">Créé et sponsorisé par</h1>
+                    <img src="res/ocp.png" width="80px" id="logo">
+                    <table id="t1">
+                        <tr>
+                            <td>Inscris-toi dès maintenant</td>
+                            <td> <button class="ins2">INSCRI-TOI</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <footer>
+                    <table id="t2">
+                        <tr c>
+                            <td class="t22">
+                                <p>Contactez-nous sur:</p>
+                                <p>support@Youcode.ma</p>
+                            </td>
+                            <td class="t2">
+                                <p>YouCode © 2019</p>
+                            </td>
+                            <td class="t2">
+                                <p>Suivez-nous sur les réseaux sociaux</p>
+                            </td>
+                        </tr>
+                    </table>
+            </footer>
+    </body>
+    
+</html>
