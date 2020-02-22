@@ -1,0 +1,704 @@
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#34393b), to(black));
+  background: linear-gradient(90deg, #34393b 0%, black 100%);
+  font-family: "Raleway";
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+}
+
+.blank {
+  height: 8%;
+}
+
+.container {
+  position: absolute;
+  text-align: right;
+  width: 100%;
+  z-index: 1;
+  height: 10%;
+}
+
+.container #logo {
+  float: left;
+  margin-left: 2%;
+  margin-top: 3%;
+  z-index: 2;
+}
+
+.container label {
+  color: black;
+  margin: 3% 10% 0 0;
+  font-size: 26px;
+  line-height: 70%;
+  display: none;
+}
+
+.container #toggle {
+  display: none;
+}
+
+.container .menu {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  font-family: "Raleway";
+  height: 50%;
+  padding: 1% 2%;
+}
+
+.container .menu a {
+  color: white;
+  font-size: 14px;
+  margin: 0 7% 0 0%;
+  line-height: 500%;
+  text-decoration: none;
+}
+
+.Container_slid {
+  display: none;
+}
+
+.Container_slid .slid_A {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.Container_slid .slid_A #moto {
+  margin-top: 6%;
+  width: 70%;
+  margin-left: 10%;
+}
+
+.Container_slid .slid_A .Text {
+  color: white;
+  width: 40%;
+  font-size: 12px;
+  margin-right: 10%;
+  margin-top: 6%;
+  line-height: 150%;
+}
+
+.Container_slid .slid_A .Text h1 {
+  color: #64D130;
+}
+
+.Container_slid .slid_A .Text a {
+  color: #64D130;
+}
+
+.Container_slid .slid_B {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.Container_slid .slid_B #aut {
+  margin-top: 6%;
+  width: 70%;
+  margin-left: 10%;
+}
+
+.Container_slid .slid_B .Text {
+  color: white;
+  width: 40%;
+  font-size: 12px;
+  margin-right: 10%;
+  margin-top: 6%;
+  line-height: 150%;
+}
+
+.Container_slid .slid_B .Text h1 {
+  color: #E20303;
+}
+
+.Container_slid .slid_B .Text a {
+  color: #E20303;
+}
+
+.Button {
+  float: right;
+  margin-right: 10%;
+}
+
+.Button .bt {
+  background-color: #64D130;
+  color: white;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+#myTXT {
+  color: white;
+  margin-left: 15%;
+}
+
+.motoORvoiture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 10%;
+}
+
+.motoORvoiture .zoneChoix #choisieMOTO, .motoORvoiture .zoneChoix #choisieVOIT {
+  width: 60%;
+}
+
+.motoORvoiture .zoneChoix #btn {
+  color: black;
+  background-color: #CEC35D;
+  border-radius: 20px;
+  width: 15%;
+  height: 6%;
+  border: none;
+  font-size: 120%;
+  position: absolute;
+  margin-top: 20%;
+  margin-left: -20%;
+}
+
+.header {
+  position: absolute;
+  top: 20%;
+  left: 33%;
+}
+
+.header h1 {
+  font-size: 76px;
+  color: white;
+}
+
+.header input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 20px;
+}
+
+.img {
+  background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.Boits {
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(#34393b), to(black));
+  background: linear-gradient(90deg, #34393b 0%, black 100%);
+  margin-top: -15%;
+}
+
+.Boits1, .Boits2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.Boits1 .Boit, .Boits2 .Boit {
+  margin-left: 4%;
+  background-color: white;
+  width: 28%;
+}
+
+.Boits1 .Boit .cars, .Boits2 .Boit .cars {
+  width: 60%;
+}
+
+.Boits1 .Boit .prix, .Boits2 .Boit .prix {
+  background-color: #CEC35D;
+  color: black;
+}
+
+.Shop {
+  position: absolute;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.Shop .ImageCars {
+  background-color: white;
+  width: 600px;
+  height: 400px;
+  text-align: center;
+}
+
+.Shop .ImageCars .photos {
+  margin-left: 20%;
+  margin-top: 10%;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.Shop .ImageCars .photos img {
+  margin-left: 20%;
+  width: 100%;
+}
+
+.Shop .ImageCars .containers {
+  position: relative;
+}
+
+.Shop .ImageCars .containers .mySlides {
+  display: none;
+}
+
+.Shop .ImageCars .containers .cursor {
+  cursor: pointer;
+}
+
+.Shop .ImageCars .containers .row {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 30%;
+}
+
+.Shop .ImageCars .containers .column {
+  float: left;
+  width: 16.66%;
+}
+
+.Shop .ImageCars .containers .demo {
+  opacity: 0.6;
+}
+
+.Shop .ImageCars .containers .active,
+.Shop .ImageCars .containers .demo:hover {
+  opacity: 1;
+}
+
+.Shop .Formulaire {
+  margin-left: 4%;
+}
+
+.Shop .Formulaire table {
+  color: white;
+}
+
+.Shop .Formulaire table input[type=text], .Shop .Formulaire table input[type=datetime] {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.Shop .Formulaire table input[type=button] {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.PopUP {
+  display: none;
+}
+
+.ShopII {
+  position: absolute;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.801);
+  width: 100%;
+  height: 100%;
+}
+
+.ShopII .Formulaire {
+  margin-top: 10%;
+  margin-left: 30%;
+}
+
+.ShopII .Formulaire .ImageCars {
+  width: 300px;
+}
+
+.ShopII .Formulaire table {
+  color: white;
+  text-transform: uppercase;
+}
+
+.ShopII .Formulaire table input[type=button] {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.inscri {
+  color: white;
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 35%;
+}
+
+.inscri table {
+  color: white;
+}
+
+.inscri table input[type=text], .inscri table input[type=password] {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px;
+  border: none;
+}
+
+.inscri table input[type=button] {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Tablet 768px */
+@media screen and (max-width: 768px) {
+  .container {
+    position: fixed;
+    background-color: #CEC35D;
+  }
+  .container #logo {
+    position: fixed;
+    margin-left: -65%;
+  }
+  .container label {
+    display: block;
+    cursor: pointer;
+  }
+  .container .menu {
+    position: fixed;
+    text-align: center;
+    font-size: 16px;
+    display: none;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #CEC35D;
+  }
+  .container .menu a {
+    display: block;
+    color: black;
+  }
+  .container #toggle:checked + .menu {
+    display: block;
+  }
+  .image {
+    width: 80%;
+    margin-top: 10%;
+  }
+  .Button {
+    margin-top: 10%;
+  }
+  .Button .bt {
+    height: 35px;
+    width: 35px;
+  }
+  .header h1 {
+    margin-left: -25%;
+  }
+  .header input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px -25%;
+    border: none;
+    border-radius: 20px;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+  .Shop {
+    margin-top: 20%;
+    margin-left: 2%;
+  }
+  .Shop .ImageCars {
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+  }
+  .Shop .ImageCars .photos {
+    margin-left: 2%;
+    margin-top: 1%;
+    width: 60px;
+  }
+  .Shop .ImageCars .photos img {
+    margin-left: 40%;
+    width: 100%;
+  }
+  .Shop .Formulaire table {
+    color: white;
+  }
+  .Shop .Formulaire table input[type=text], .Shop .Formulaire table input[type=datetime] {
+    width: 200px;
+    padding: 2px 2px;
+  }
+  .Shop .Formulaire table input[type=button] {
+    width: 100px;
+    height: 50px;
+  }
+  .inscri {
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 20%;
+  }
+}
+
+/* MobileS 320px */
+@media screen and (max-width: 320px) {
+  .container {
+    position: fixed;
+    background-color: #CEC35D;
+  }
+  .container #logo {
+    position: fixed;
+    margin-left: -75%;
+  }
+  .container label {
+    display: block;
+    cursor: pointer;
+  }
+  .container .menu {
+    position: fixed;
+    text-align: center;
+    font-size: 16px;
+    display: none;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #CEC35D;
+  }
+  .container .menu a {
+    display: block;
+    color: black;
+  }
+  .container #toggle:checked + .menu {
+    display: block;
+  }
+  .Container_slid .slid_A {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .Container_slid .slid_A .image {
+    width: 100%;
+  }
+  .Container_slid .slid_A .Text {
+    width: 90%;
+    line-height: 120%;
+    margin-left: 5%;
+  }
+  .Container_slid .slid_B {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .Container_slid .slid_B .image {
+    width: 100%;
+  }
+  .Container_slid .slid_B .Text {
+    width: 90%;
+    line-height: 120%;
+    margin-left: 5%;
+  }
+  .Button {
+    margin-top: 6%;
+  }
+  .Button .bt {
+    height: 30px;
+    width: 30px;
+  }
+  .motoORvoiture {
+    margin-top: -20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 10%;
+  }
+  .motoORvoiture .zoneChoix #choisieMOTO, .motoORvoiture .zoneChoix #choisieVOIT {
+    width: 80%;
+    margin-bottom: 18%;
+  }
+  .motoORvoiture .zoneChoix #btn {
+    color: black;
+    background-color: #CEC35D;
+    border-radius: 4px;
+    width: 50%;
+    height: 6%;
+    border: none;
+    font-size: 80%;
+    position: absolute;
+    margin-top: 50%;
+    margin-left: -60%;
+  }
+  .header h1 {
+    font-size: 40px;
+    margin-left: -35%;
+  }
+  .header input[type=text] {
+    width: 100%;
+    margin: 8px -24%;
+    border: none;
+    border-radius: 20px;
+  }
+  .Boits {
+    margin-top: -35%;
+  }
+  .Boits img:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .Boits1, .Boits2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5%;
+  }
+  .Boits1 .Boit, .Boits2 .Boit {
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 90%;
+  }
+  .Boits1 .Boit .cars, .Boits2 .Boit .cars {
+    width: 60%;
+  }
+  .Boits1 .Boit .prix, .Boits2 .Boit .prix {
+    font-size: 12px;
+  }
+  .Shop {
+    margin-top: 20%;
+    margin-left: 5%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Shop .ImageCars {
+    background-color: white;
+    width: 280px;
+    height: 170px;
+    text-align: center;
+    margin-top: 2%;
+  }
+  .Shop .ImageCars .containers .row {
+    margin-top: 4%;
+  }
+  .Shop .Formulaire table {
+    color: white;
+  }
+  .Shop .Formulaire table input[type=text], .Shop .Formulaire table input[type=datetime] {
+    width: 120px;
+    padding: 2px 2px;
+  }
+  .Shop .Formulaire table input[type=button] {
+    width: 100px;
+    height: 50px;
+  }
+  .ShopII {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .ShopII .Formulaire {
+    margin-top: 30%;
+    margin-left: 4%;
+  }
+  .ShopII .Formulaire .ImageCars {
+    width: 200px;
+  }
+  .ShopII .Formulaire table {
+    color: white;
+  }
+  .ShopII .Formulaire table input[type=button] {
+    width: 100px;
+  }
+  .inscri {
+    color: white;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 5%;
+  }
+  .inscri table {
+    font-size: 11px;
+    color: white;
+  }
+  .inscri table input[type=text], .inscri table input[type=password] {
+    width: 150px;
+    padding: 12px 2px;
+    margin: 9px;
+    border: none;
+  }
+  .inscri table input[type=button] {
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+/*# sourceMappingURL=style.css.map */

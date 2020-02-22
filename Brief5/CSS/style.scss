@@ -1,0 +1,712 @@
+
+// Variables
+$background:linear-gradient(90deg, rgba(52,57,59,1) 0%, rgba(0,0,0,1) 100%);
+$font: 'Raleway';
+$nav-color:#CEC35D;
+$blank:8%;
+$img_slid:70%;
+$txtwidth:40%;
+$slidmargin:10%;
+$color_moto:#64D130;
+$color_ferrari:#E20303;
+$textp:12px;
+$colortextp:white;
+//mixin position
+@mixin Position($property) {
+    position: $property;
+}
+
+//Page web
+
+body{
+        background:$background;
+        font-family: $font;
+        margin: 0px;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        background-repeat: no-repeat;
+}
+      
+.blank{height:$blank;}
+
+//slid
+
+
+// styleMenu
+.container {
+        @include Position(absolute);
+        text-align: right;
+        width: 100%;
+        z-index: 1;
+        height: 10%;
+
+    #logo{
+            float: left;
+            margin-left: 2%;
+            margin-top: 3%;
+            z-index: 2;
+    }
+    label{
+        color: black;
+        margin: 3% 10% 0 0;
+        font-size: 26px;
+        line-height: 70%;
+        display: none;
+    }
+    #toggle{
+        display:none;
+    }
+    .menu{  
+        @include Position(absolute);
+        overflow: hidden;
+        width: 100%;
+        font-family: $font;
+        height: 50%;
+        padding: 1% 2%;
+        a{
+            color: white;
+            font-size: 14px; 
+            margin: 0 7% 0 0%;
+            line-height: 500%;
+            text-decoration: none;
+        }
+    }
+}
+
+// styleSlider
+.Container_slid{display: none;}
+.Container_slid{
+
+        // slideA
+  .slid_A{
+    display: flex;
+    flex-direction: row;
+  
+        #moto{
+            margin-top:$slidmargin - 4%;
+            width: $img_slid;
+            margin-left: $slidmargin;
+        }
+        .Text{
+            color:$colortextp;
+            width:$txtwidth;
+            font-size: $textp;
+            margin-right: $slidmargin;
+            margin-top:$slidmargin - 4%;
+            line-height: 150%;
+            h1{
+            color:$color_moto;  
+            }
+            a{
+                color: $color_moto;
+            }
+        }
+    } 
+}
+
+.Container_slid{
+            
+        // slideB
+    
+    .slid_B{
+        display: flex;
+        flex-direction: row;
+        #aut{
+            margin-top:$slidmargin - 4%;
+            width: $img_slid;
+             margin-left: $slidmargin;
+            }
+        .Text{
+            color:$colortextp;
+            width:$txtwidth;
+            font-size: $textp;
+            margin-right: $slidmargin;
+            margin-top:$slidmargin - 4%;
+            line-height: 150%;
+            h1{
+                color:$color_ferrari;
+            }
+            a{
+                color: $color_ferrari;
+            }
+        }
+    } 
+}
+
+.Button{
+    float: right;
+    margin-right: 10%;
+    .bt{
+        background-color: $color_moto;
+        color:white;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        border: none;
+        cursor: pointer;
+     }
+  }
+    
+        
+//   1page Reservation MOTOS OU VOITURES
+
+#myTXT{
+    color: white;
+    margin-left: 15%;
+}
+.motoORvoiture{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    .zoneChoix{
+        #choisieMOTO,#choisieVOIT{
+            width: 60%;
+        }
+        #btn {
+            color:black;
+            background-color: $nav-color;
+            border-radius: 20px;
+            width: 15%;
+            height: 6%;
+            border: none;
+            font-size: 120%;  
+            position: absolute; 
+            margin-top: 20%; 
+            margin-left: -20%;    
+        }
+    }
+}
+
+
+// RESauto 
+.header{
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    h1{
+        font-size: 76px;
+       color: white;
+    }
+    input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+  }
+}
+.img{
+    background-image: url("../img/header.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.Boits{
+    position: absolute;
+    background:$background;
+    margin-top: -15%;
+}
+.Boits1,.Boits2{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-bottom: 2%;
+    .Boit{
+        margin-left: 4%;
+        background-color: white;
+        width: 28%;
+        .cars{
+            width:60%;
+        }
+        .prix{
+            background-color: $nav-color;
+            color:black;
+
+        }
+    }
+}
+
+
+//Formulaire
+
+.Shop{
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-top: 10%;
+    .ImageCars{
+        background-color: white;
+        width: 600px;
+        height:400px ;
+        text-align: center;
+        .photos{
+            margin-left: 20%;
+            margin-top: 10%;
+            img{ 
+                margin-left: 20%;
+                width:100%;
+            }
+            width: 100px;
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        //Ferrari slider
+
+        .containers {
+            position: relative;
+          
+          
+          .mySlides {
+            display: none;
+          }
+          .cursor {
+            cursor: pointer;
+          }
+        
+          
+          .row{
+              position: absolute;
+              margin-top: 10%;
+              margin-left: 30%;
+          }
+          
+          .column {
+            float: left;
+            width: 16.66%;
+          }
+          .demo {
+            opacity: 0.6;
+          }
+          
+          .active,
+          .demo:hover {
+            opacity: 1;
+          }
+        }
+    }
+    .Formulaire{
+        margin-left: 4%;
+        table{
+            color: white;
+            input[type=text],input[type=datetime] {
+                width: 300px;
+                padding: 12px 20px;
+                margin: 8px;
+                border: none;
+                text-transform: uppercase;
+            }
+            input[type=button]{
+                width: 200px;
+                height: 50px;
+                background-color: white;
+                color:black;
+                border: none;
+                font-size: 22px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// POPUP
+.PopUP{
+    display: none;
+}
+
+.ShopII{
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.801);
+    width: 100%;
+    height: 100%;
+    .Formulaire{
+        margin-top:10%;
+        margin-left:30%;
+        .ImageCars{
+            width: 300px;
+        }
+        table{
+            color: white;
+            input[type=button]{
+                  width: 200px;
+                  height: 50px;
+                  background-color: white;
+                  color:black;
+                  border: none;
+                  font-size: 22px;
+                  cursor: pointer;
+            }
+            text-transform: uppercase;
+        }
+    }
+}
+
+//inscription
+.inscri {
+    color: white;
+    table{
+        color: white;
+        input[type=text],input[type=password] {
+            width: 300px;
+            padding: 12px 20px;
+            margin: 8px;
+            border: none;
+        }
+        input[type=button]{
+            width: 200px;
+            height: 50px;
+            background-color: white;
+            color:black;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+    }
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 35%;
+}
+
+
+
+
+  /* Tablet 768px */
+  $tablet:768px;
+    @media screen and (max-width:$tablet){
+        //Acc
+        .container{
+            @include Position(fixed);
+            background-color:$nav-color;
+            
+            #logo{
+                @include Position(fixed);
+                margin-left: -65%;
+            }
+            label{
+                display: block;
+                cursor: pointer;  
+             }
+             .menu  {
+                @include Position(fixed);
+                text-align: center;
+                font-size: 16px;
+                display: none;
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+                background-color:$nav-color;
+                a{
+                   display: block;
+                   color: black; 
+                }
+             }
+            #toggle:checked + .menu{
+                display: block;     
+            }
+        }
+      
+        .image{
+            width: 80%;
+            margin-top: 10%;
+        }
+        .Button{
+            margin-top: 10%;
+            .bt{
+                height: 35px;
+                width: 35px;
+            }
+        }
+       
+// RESauto 
+    .header{
+        h1{
+            margin-left: -25%;
+        }
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px -25%;
+            border: none;
+            border-radius: 20px;
+         }
+    }
+    .img{   
+            width: 100%;
+            height: 100%;
+    }
+
+
+//Formulaire
+.Shop{
+        margin-top: 20%;
+        margin-left: 2%;
+        .ImageCars{
+            background-color: white;
+            width: 400px;
+            height:200px ;
+            text-align: center;
+            .photos{
+                margin-left: 2%;
+                margin-top: 1%;
+                img{ 
+                    margin-left: 40%;
+                    width:100%;
+                }
+                width: 60px;
+            }
+        }
+        .Formulaire{
+            table{
+                color: white;
+                input[type=text],input[type=datetime] {
+                    width: 200px;
+                    padding: 2px 2px;
+                }
+                input[type=button]{
+                    width: 100px;
+                    height: 50px;
+                }
+            }
+        }
+}
+  
+//inscription
+.inscri {
+   
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+}
+
+
+
+  /* MobileS 320px */
+  $mobile:320px;
+  @media screen and (max-width:$mobile){
+
+    //Acc
+
+    .container{
+        @include Position(fixed);
+        background-color:$nav-color;
+        
+        #logo{
+            @include Position(fixed);
+            margin-left: -75%;
+        }
+        label{
+            display: block;
+            cursor: pointer;  
+         }
+         .menu  {
+            @include Position(fixed);
+            text-align: center;
+            font-size: 16px;
+            display: none;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background-color:$nav-color;
+            a{
+               display: block;
+               color: black; 
+            }
+         }
+        #toggle:checked + .menu{
+            display: block;     
+        }
+    }
+
+    .Container_slid{
+
+        .slid_A {
+            flex-direction: column;
+            justify-content: center;
+            .image{
+                width: 100%;
+            }
+            .Text{
+                width: 90%;
+                line-height: 120%;
+                margin-left: 5%;
+            }
+        }
+    }
+
+    .Container_slid{
+
+        .slid_B {
+            flex-direction: column;
+            justify-content: center;
+            .image{
+                width: 100%;
+            }
+            .Text{
+                width: 90%;
+                line-height: 120%;
+                margin-left: 5%;
+            }
+        }
+    }
+    
+    .Button{
+        margin-top: 6%;
+        .bt{
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    // 1page Reservation MOTOS OU VOITURES
+
+    .motoORvoiture{
+        margin-top: -20%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    .zoneChoix{
+        #choisieMOTO,#choisieVOIT{
+            width: 80%;
+            margin-bottom: 18%;
+        }
+        #btn {
+            color:black;
+            background-color: $nav-color;
+            border-radius: 4px;
+            width: 50%;
+            height: 6%;
+            border: none;
+            font-size: 80%;  
+            position: absolute; 
+            margin-top: 50%; 
+            margin-left: -60%;    
+        }
+    }
+    }
+
+    // RESauto 
+
+    .header{
+    h1{
+        font-size: 40px;
+        
+        margin-left: -35%;
+   }
+   input[type=text] {
+    width: 100%;
+    margin: 8px -24%;
+    border: none;
+    border-radius: 20px;
+  }
+    }
+
+    .Boits{
+    margin-top: -35%;
+    img:hover{
+        transform: scale(1.1);
+    }
+    }
+    .Boits1,.Boits2{
+    flex-direction: column;
+    margin-bottom: 5%;
+    .Boit{
+        margin-left: 5%;
+        margin-bottom: 5%;
+        width: 90%;
+        .cars{
+            width:60%;
+        }
+        .prix{
+            font-size: 12px;
+
+        }
+    }
+    }
+
+    .Shop{
+    margin-top: 20%;
+    margin-left: 5%;
+    
+    flex-direction: column;
+    .ImageCars{
+        background-color: white;
+        width: 280px;
+        height:170px ;
+        text-align: center;
+        margin-top: 2%;
+          .containers{
+            .row{
+                margin-top:4%;
+            }
+          }
+    }
+    .Formulaire{
+        table{
+            color: white;
+            input[type=text],input[type=datetime] {
+                width: 120px;
+                padding: 2px 2px;
+            }
+            input[type=button]{
+                width: 100px;
+                height: 50px;
+            }
+        }
+    }
+    }
+
+    // POPUP
+
+    .ShopII{
+    flex-direction: column;
+
+    
+    .Formulaire{
+        margin-top:30%;
+        margin-left:4%;
+        .ImageCars{
+            width: 200px;
+        }
+        table{
+            color: white;
+            input[type=button]{
+                  width: 100px;
+            }
+        }
+    }
+    }
+
+    //inscription
+
+    .inscri {
+    color: white;
+    table{
+        font-size: 11px;
+        color: white;
+        input[type=text],input[type=password] {
+            width: 150px;
+            padding: 12px 2px;
+            margin: 9px;
+            border: none;
+        }
+        input[type=button]{
+            width: 100px;
+            height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 5%;
+    }
+}

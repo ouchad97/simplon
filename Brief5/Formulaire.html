@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Formulaire</title>
+        <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+        
+        <script src="Javascript/FormulaireScript.js"></script>
+      
+    </head>
+
+   
+    <body>
+        <!-- Menu -->
+            <div class="container"> 
+                <img src="img/logo.png" id="logo">
+                <label for="toggle">&#9776;</label>
+                <input type= "checkbox" id="toggle"/> 
+    
+                <div class="menu" >
+                    <a href="Accueil.html">ACCUEIL</a>
+                    <a href="RESERVATION.html">RESERVATION</a>
+                    <a href="Inscription.html">INSCRIPTION</a>
+                </div>
+            </div>
+
+
+            <div class="Shop">
+                
+                <div class="ImageCars">
+                  
+<div class="containers">
+    <div class="mySlides" style="display: block;">
+      <img src="img/aut.png" style="width:70%">
+    </div>
+  
+    <div class="mySlides">
+      <img src="img/1.png" style="width:70%">
+    </div>
+  
+    <div class="mySlides">
+      <img src="img/2.png" style="width:70%">
+    </div>
+      
+  
+   
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="img/aut.png" style="width:100%" onclick="currentSlide(1)" alt="Ferrari">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/1.png" style="width:100%" onclick="currentSlide(2)" alt="Ferrari">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img/2.png" style="width:100%" onclick="currentSlide(3)" alt="Ferrari">
+      </div>
+      
+    </div>
+  </div>
+                </div>
+                <div class="Formulaire">
+                    <h1>Ferrari Car Title</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/> Lorem Ipsum has been the industry's s</p>
+                    <table>
+                        <tr>
+                            <td><label>Nom complet</label></td>
+                            <td><input type="text" id="nom"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Date naissance</label></td>
+                            <td><input type="datetime" id="date_naissance"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Période de location</label></td>
+                            <td><input type="text" id="periode"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Nombre personnes</label></td>
+                            <td><input type="text" id="Nombre"></td>
+                        </tr>
+                        <tr>
+                            <td><h2>300DH/24H</h2></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" id="valider" value="Valider" onclick="validname(),Display(),valeurs()"></td>
+                        </tr>
+                       
+                    </table>
+                </div>
+            </div>
+           
+            
+        <div class="PopUP">
+            <div class="ShopII">
+                
+                <div class="Formulaire">
+                     <table>
+                        <tr>
+                             <td>
+                                 <div class="ImageCars">
+                                    <img src="img/aut.png" alt="Ferrari" id="Article" width="70%">
+                                </div>
+                            </td>
+                            <td>
+                                <h1>Ferrari Car Title</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Nom complet</label></td>
+                            <td><p id="champ1"></p></td>
+                        </tr>
+                        <tr>
+                            <td><label>Date naissance</label></td>
+                            <td><p id="champ2"></p></td>
+                        </tr>
+                        <tr>
+                            <td><label>Période de location</label></td>
+                            <td><p id="champ3"></p></td>
+                        </tr>
+                        <tr>
+                            <td><label>Nombre personnes</label></td>
+                            <td><p id="champ4"></p></td>
+                        </tr> 
+                        <tr>
+                            <td><h2>300DH/24H</h2></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" id="valider" value="Valider" onclick="Close()"></td>
+                        </tr>
+                       
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

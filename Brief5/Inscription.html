@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>INSCRIPTION</title>
+        <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+        <script src="Javascript/InscriptionScript.js"></script>
+    </head>
+    <body>
+        <!-- Menu -->
+        <div class="container"> 
+              
+            <img src="img/logo.png" id="logo">
+            <label for="toggle">&#9776;</label>
+            <input type= "checkbox" id="toggle"/> 
+            
+            <div class="menu" >
+                   <a href="Accueil.html">ACCUEIL</a>
+                   <a href="RESERVATION.html">RESERVATION</a>
+                   <a href="Inscription.html">INSCRIPTION</a>
+            </div>
+
+        </div>
+
+        <form class="inscri">
+            <h1>INSCRIS TOI!</h1>
+            <table>
+                <tr>
+                    <td>Nom:</td>
+                    <td><input type="text" id="nom"></td>
+                </tr>
+                <tr>
+                    <td>Prenom:</td>
+                    <td><input type="text" id="prenom"></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="text" id="age"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Mot de pass:</td>
+                    <td><input type="password" id="mdps"></td>
+                </tr>
+                <tr>
+                    <td>Confirmer mot de pass:</td>
+                    <td><input type="password" id="cnfrm"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Valider" id="valider" onclick="password(),validEmail(),validname()"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
